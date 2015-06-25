@@ -1,0 +1,94 @@
+/*
+*
+    COPYRIGHT LICENSE: This information contains sample code provided in source code form. You may copy, modify, and distribute
+    these sample programs in any form without payment to IBM® for the purposes of developing, using, marketing or distributing
+    application programs conforming to the application programming interface for the operating platform for which the sample code is written.
+    Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES,
+    EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY,
+    FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE.
+    IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+
+*/
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	background-color: #ccc;
+}
+
+#header {
+	text-align: center;
+	background-color: #1D4D90;
+	color: #F9FAFB;
+	font-size: 16px;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px solid white;
+	position: fixed;
+	width: 100%;
+}
+
+h1 {
+	margin: 0;
+	font-size: 18px;
+	font-family: inherit;
+}
+
+#ReloadButton {
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAABBF0RVh0WE1MOmNvbS5hZG9iZS54bXAAPD94cGFja2V0IGJlZ2luPSIgICAiIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNC4xLWMwMzQgNDYuMjcyOTc2LCBTYXQgSmFuIDI3IDIwMDcgMjI6Mzc6MzcgICAgICAgICI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOnhhcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx4YXA6Q3JlYXRvclRvb2w+QWRvYmUgRmlyZXdvcmtzIENTMzwveGFwOkNyZWF0b3JUb29sPgogICAgICAgICA8eGFwOkNyZWF0ZURhdGU+MjAwOC0wMy0xM1QyMDo0Njo1Nlo8L3hhcDpDcmVhdGVEYXRlPgogICAgICAgICA8eGFwOk1vZGlmeURhdGU+MjAwOC0wMy0xM1QyMDo1MzowOVo8L3hhcDpNb2RpZnlEYXRlPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkj6GQAAA1FJREFUOI2tlUtoXFUYx//fuffO3DuvTGbmTttYY7HG2C60tQZEsRYrChVpA1IQFZSK0gpuFFzowk03EQVFRERXupBoRaHQhYq6EVRSG1vcmLSByYR03o/7fpzPhWY6HUPtov/VWfz5ne91vkPMjBsp8X8G+kcqiK4LSJtFSO9SFlN4Ztd44bGEmtopSZQFR2uWb11YbvS+4CN86rqB9Dk9vHtr9oPdJXNqi4igSgckY7DQ4CsprAaMxfr6j5WKf4yf44vXBNKndGDmluKZGTOvR9YaGBJSywKkgmQAEfWgKAZCfQt+ql5e+Wupv5+Pc2UYqA5gr1Bm6qHMJ3fnc3q3cQmJVBm1OC1Xm/bPNS+0J9N66abM+L6xqAHZqeDe0rYd3Z73HhHNDgd1BTiNJ6fH8rf2W6sgvYQ/WsrCwuLyS/wq/7LhER/pRw/csfX9baJlqm4Tt+eLR2pz6/sALAw8G4fJbOZxQwZwAsKanbAWzlSfHYYBgHzBm//hfPW1bpzjbs9FQQVyBe3wsEcAABGJJGt7PNdBIFNYqfYX+R2+sGkbv46+rNS8Tig1SD9AkpN7N6uhkD4M24lBiopeO+z/p3uvkwpGHt/B7jwRBWZCgGKJsB+PkUYpnICODNobKcexE7cdH7DsEBlFMTeJrSCITk28nbImxjWza4Vw3Qg7Ssn7t7+VsY2iNgcgKQCAmdntRUuuJ9Duucjqyp10TBwapvFJrhk1cTSra2chY9HqBFhv2EgnVTFRzH01++BdL/NJ9gZzqJ9QX7x5l/GhHVlI60kEfa1+ecl/0/81/IzPcW+Q+n1ULj+in86VMQMWcDtivvqG9RQzR8DQYNMeKpqH9LMJU072nQBZQ4OQGqx63PKa8rjzcTA/gO4ls/io/j0zX2rN+bPMLEebAj7HTTpMzxduS57Wilqi40QAhTDSiUIxSKWvSv93rtNOegAX4Q3DgJFtw9/wt63z/kFvBb+JngoKFHgOw2qGCjDYPERExMvcZWafRrbQlZdClACQB/CnjfBp3IODSpn2Q+FpWY+YiIoAckN+AGAALhG1mTm4uoZEOoDtAEoAJAAfQAggBpABYPwLGFYMoAFglZm9USAApAAkR0txDW1c7Aw4N/oL+BuiLpISYx1D+AAAAABJRU5ErkJggg==') no-repeat center center;
+	width: 30px;
+	height: 38px;
+	float: right;
+}
+
+#ReloadButton:Hover, #mobilefirst:Hover {
+	cursor: pointer;
+}
+
+#wrapper {
+	width: 90%;
+	margin: auto;
+	padding-top: 38px;
+}
+
+#mobilefirst {
+	text-align: center;
+	color: #1D4D90;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#wrapper select {
+	color: #1D4D90;
+	padding: 2px;
+	width: 70%;
+}
+
+#selector {
+	margin-top: 5px;
+}
+
+#wrapper #info {
+	margin: 40px auto;
+	padding: 20px;
+	border: 1px solid lightgrey;
+	width: 80%;
+	text-align: center;
+	text-shadow: 2px 2px 5px #1D4D90;
+	font-size: 25px;
+}
+
+
+/* Provide different styling for iOS 7. */
+body.wl_ios7 {
+	padding-top: 0 !important;
+}
+
+.wl_ios7 #header {
+	padding-top: 9px;
+}
+
+.wl_ios7 #wrapper {
+	padding-top: 55px;
+}
