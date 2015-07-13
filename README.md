@@ -1,13 +1,13 @@
 IBM MobileFirst Platform Foundation
 ===
-### Sample Name
-
+### Hybrid applications client-side API
+This sample uses some basic client-side API methods used to develop hybrid applications.
 
 ### Usage
-Follow the instructions in the tutorials listed below.
+Follow the instructions in the tutorial(s) listed below.
 
 ### Tutorials
-
+https://developer.ibm.com/mobilefirstplatform/documentation/getting-started-7-1/foundation/client-side-development-basics/hybrid-applications-client-side-api-basics/
 
 ### Supported Levels
 IBM MobileFirst Platform Foundation 7.1
