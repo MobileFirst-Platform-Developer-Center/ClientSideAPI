@@ -55,3 +55,6 @@ derby.log
 #
 # END mfp-gitignore rules
 #
+
+.jazzignore
+/pom.xml
